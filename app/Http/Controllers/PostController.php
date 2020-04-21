@@ -19,6 +19,7 @@ class PostController extends Controller
     public function index()
     {
         //
+        return Post::all();
     }
 
     /**
@@ -52,7 +53,7 @@ class PostController extends Controller
     public function show($id)
     {
         //
-        return Post::all();
+        
     }
 
     /**

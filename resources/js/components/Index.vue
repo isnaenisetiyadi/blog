@@ -13,9 +13,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="post of posts">
-            <td>{{ post.Title }}</td>
-            <td>{{ post.Description }}</td>
+          <tr v-for="(post, index) of posts" v-bind:key="index">
+            <td>{{ post.title }}</td>
+            <td>{{ post.description }}</td>
             <td>
               <button class="btn btn-info btn-sm">View</button>
               <button class="btn btn-warning btn-sm">Edit</button>
