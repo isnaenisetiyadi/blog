@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-        <router-link to="/" class="btn btn-info">Kembali</router-link>
+        <router-link to="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></router-link>
     </div>
     <div class="card-body">
       <h2>{{ posts.title }}</h2>

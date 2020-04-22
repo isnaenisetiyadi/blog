@@ -6,8 +6,8 @@
 
 require('./bootstrap');
 require('@popperjs/core');
-import { Popper } from 'popper.js';
-// Window.Popper = Popper;
+// import { Popper } from 'popper.js';
+Window.Popper = Popper;
 
 // KODE SATU
 import Vue from 'vue'
