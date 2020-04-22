@@ -57,7 +57,7 @@ export default {
       axios
         .patch(`/posts/` + id, this.posts)
         .then(response => {
-          this.$router.push({path:"/"});
+          this.$router.push({path:'/'});
           this.posts = response.data;
         })
         .catch(e => {

@@ -26,7 +26,7 @@
               <!-- <button class="btn btn-warning btn-sm">
                 <i class="fa fa-code" aria-hidden="true"></i>
                  Edit</button> -->
-              <button class="btn btn-danger btn-sm">
+              <button class="btn btn-danger btn-sm" v-on:click="submitPostDelete(post.id,index)">
                 <i class="fa fa-trash" aria-hidden="true"></i>
                  Delete</button>
             </td>
@@ -68,6 +68,22 @@ export default {
     // } catch (e) {
     //   this.errors.push(e)
     // }
+  },
+  methods: {
+    submitPostDelete(id, index) {
+      if (confirm("Click 'Ok' to delete.")){
+      // let id = this.$route.params.id;
+      axios
+        .delete(`/posts/` + id)
+        .then(response => {
+          // this.$router.push({path:"/"});
+          this.posts.splice(index, 1);
+        })
+        .catch(e => {
+          this.errors.push(e);
+        });
+    }
+    }
   }
 };
 </script>
