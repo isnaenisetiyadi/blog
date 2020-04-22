@@ -22,10 +22,10 @@
                 <i class="fa fa-eye" aria-hidden="true"></i>
                 <!-- <i class="fa fa-address-book-o" aria-hidden="true"></i> -->
                View</router-link>
-              <!-- <button class="btn btn-info btn-sm">View</button> -->
-              <button class="btn btn-warning btn-sm">
+              <router-link :to="{name: 'editPost', params:{id:post.id}}" class="btn btn-warning btn-sm"><i class="fa fa-code" aria-hidden="true"></i> Edit</router-link>
+              <!-- <button class="btn btn-warning btn-sm">
                 <i class="fa fa-code" aria-hidden="true"></i>
-                 Edit</button>
+                 Edit</button> -->
               <button class="btn btn-danger btn-sm">
                 <i class="fa fa-trash" aria-hidden="true"></i>
                  Delete</button>

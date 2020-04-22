@@ -23,6 +23,7 @@ const Bar = { template: '<div>bar</div>' }
 import Index from './Components/Index.vue'
 import Create from './Components/Create.vue'
 import Read from './components/Read.vue'
+import Update from './components/Update.vue'
 
 
 // import { popper } from '@popperjs/core';
@@ -36,7 +37,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const routes = [
     { path: '/', component: Index },
     { path: '/Create', component: Create }, { path: '/posts' },
-    { path: '/read/:id', component: Read, name: 'readPost' }
+    { path: '/read/:id', component: Read, name: 'readPost' },
+    { path: '/:id/edit/', component: Update, name: 'editPost' }
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
