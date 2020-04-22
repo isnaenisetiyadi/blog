@@ -9,7 +9,7 @@
           <tr>
             <th scope="col">Title</th>
             <th scope="col">Description</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="width:30%">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -17,7 +17,8 @@
             <td>{{ post.title }}</td>
             <td>{{ post.description }}</td>
             <td>
-              <button class="btn btn-info btn-sm">View</button>
+              <router-link :to="{name: 'readPost', params:{id:post.id}}" class="btn btn-info btn-sm">View</router-link>
+              <!-- <button class="btn btn-info btn-sm">View</button> -->
               <button class="btn btn-warning btn-sm">Edit</button>
               <button class="btn btn-danger btn-sm">Delete</button>
             </td>

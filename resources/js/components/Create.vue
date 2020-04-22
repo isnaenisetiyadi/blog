@@ -43,7 +43,7 @@ export default {
       axios
         .post(`/posts`, this.posts)
         .then(response => {
-          this.$router.push({ path: "/" });
+          this.$router.push('/');
           this.posts = response.data;
         })
         .catch(e => {

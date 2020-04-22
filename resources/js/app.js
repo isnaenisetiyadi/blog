@@ -22,7 +22,10 @@ const Bar = { template: '<div>bar</div>' }
 
 import Index from './Components/Index.vue'
 import Create from './Components/Create.vue'
-import { popper } from '@popperjs/core';
+import Read from './components/Read.vue'
+
+
+// import { popper } from '@popperjs/core';
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
@@ -32,7 +35,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 // ]
 const routes = [
     { path: '/', component: Index },
-    { path: '/Create', component: Create }, { path: '/posts' }
+    { path: '/Create', component: Create }, { path: '/posts' },
+    { path: '/read/:id', component: Read, name: 'readPost' }
 ]
 const router = new VueRouter({
     routes // short for `routes: routes`
